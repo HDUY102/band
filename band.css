@@ -14,7 +14,10 @@ html{
     height: 46px;
     background-color: rgb(0, 0, 0);
 }
-ul{
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
     list-style-type: none;
 }
 #nav li{
@@ -34,7 +37,7 @@ ul{
 #nav li:hover .subnav{
     display: block;
 }
-#nav .subnav >li:hover a,#nav > li:hover > a{
+#nav .subnav >li:hover a,#nav > li:hover > a,#nav li .icon-down:hover{
     background-color: #ccc;
     color: #000;
 }
@@ -50,6 +53,25 @@ ul{
 #nav .subnav a{
     color: #000;
 }
+#nav li .icon-down{
+    position: absolute;
+    width: 20px;
+    color: #fff !important;
+    left:70%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#nav li:hover .icon-down{
+    color: black !important;
+}
+/* #header.search-btn{
+    float: right;
+}
+#header .search-icon{
+    
+    color: #000;
+    font-size: 20px;
+} */
 /* slide */
 #slider{
 
