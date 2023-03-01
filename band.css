@@ -11,6 +11,10 @@ html{
 }
 /* Header */
 #header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46px;
     background-color: rgb(0, 0, 0);
 }
@@ -74,7 +78,13 @@ html{
 } */
 /* slide */
 #slider{
-
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlstBCz92Rb1xMQEIcEbKdWh_oTWAap2_UBg&usqp=CAU')top center / cover no-repeat;
+}
+#slider .text-heading,#slider .text-description{
+    text-align: center;
+    color: red;
 }
 /* content */
 #content{
