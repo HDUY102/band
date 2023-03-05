@@ -71,10 +71,6 @@ html{
 #nav li:hover .icon-down{
     color: black !important;
 }
-#header .search-icon:hover{
-    background-color: red;
-    opacity: 0.8;
-}
 #header .search-icon{
     float: right;
     height: 40px;
@@ -82,6 +78,10 @@ html{
     transform: translateY(-45px);
     padding: 4px;
     color: #fff;
+}
+#header .search-icon:hover{
+    background-color: red;
+    opacity: 0.8;
 }
 /* slide */
 #slider{
@@ -183,7 +183,7 @@ html{
 /* Places */
 .plaeces-list{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     margin: 32px -8px 0; 
     padding-bottom: 48px;
 }
@@ -209,17 +209,20 @@ html{
 .place-heading{
     font-size: 15px;
     font-weight: 600;
+    text-align: center;
 }
 .place-daytime{
     margin-top: 15px;    
     color: #757575;
+    text-align: center;
 }
 .place-desc{
     margin-top: 15px;
     line-height: 1.4;
+    text-align: justify;
 }
 .place-btn{
-    margin-top: 15px;
+    margin: 15px 0 0 50px;
     color:#fff;
     background-color: #000;
     text-decoration: none;
@@ -233,4 +236,100 @@ html{
 /* footer */
 #footer{
 
+}
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    position: relative;
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+}
+.modal-header{
+    background: rgb(71, 223, 71);
+    height: 130px;
+    display: flex;
+    align-items: center; /*Canh giữa theo chiều cao*/
+    justify-content: center;/*Canh giữa theo chiều ngang*/
+    font-size: 30px;
+    color: #fff;
+}
+.close-icon{
+    position: absolute;
+    height: 40px;
+    width: 45px;
+    color:#fff;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.close-icon:hover{
+    opacity: 1;
+    background-color: #f44336;
+}
+.buytickes-logo{
+    margin-right: 7px;
+    height: 45px;
+}
+.modal-body{
+    padding: 20px;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.shopping-cart,.user-icon,.pay-icon{
+    height: 17px;
+    width: 25px;
+    color:#000;
+    transform: translateY(2px);
+}
+.pay-icon{
+    color: #fff;
+}
+.modal-input{
+    /* border:1px solid #ccc; */
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.modal-input:focus{
+    background-color: #bce3f8;
+}
+#buy-tiktes{
+    background: rgb(71, 223, 71);
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+#buy-tiktes:hover{
+    opacity: 0.8;
+}
+.modal-footer{
+    text-align: right;
+    padding: 16px;
+}
+.modal-footer a{
+    color: #2196F3;
 }
