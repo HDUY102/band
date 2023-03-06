@@ -245,9 +245,9 @@ html{
     left: 0;
     bottom: 0;
     background: rgba(0,0,0,0.4);
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 .modal.open{
     display: flex;
@@ -257,6 +257,7 @@ html{
     background: #fff;
     width: 900px;
     min-height: 200px;
+    animation: modalFadeIn ease .3s; /*tạo animation chuyển động 0.3s*/
 }
 .modal-header{
     background: rgb(71, 223, 71);
@@ -331,4 +332,13 @@ html{
 }
 .modal-footer a{
     color: #2196F3;
+}
+@keyframes modalFadeIn { /*tạo chuyển động*/
+    form{
+        opacity: 0;
+        transform: translateY(-140px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

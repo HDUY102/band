@@ -85,7 +85,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-daytime">Fri March 3 2023</p>
                                 <p class="place-desc">New York, also known as New York City to distinguish it from the state of New York.</p>
-                                <a href="#" class="place-btn">Buy Tickets</a>
+                                <button class="place-btn js-buytickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="places-item">
@@ -94,7 +94,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-daytime">Fri March 3 2023</p>
                                 <p class="place-desc">Paris, also known as Paris City to distinguish it from the state of Paris.</p>
-                                <a href="#" class="place-btn">Buy Tickets</a>
+                                <button class="place-btn js-buytickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="places-item">
@@ -103,7 +103,7 @@
                                 <h3 class="place-heading">London</h3>
                                 <p class="place-daytime">Fri March 3 2023</p>
                                 <p class="place-desc">London, also known as London City to distinguish it from the state of London.</p>
-                                <a href="#" class="place-btn">Buy Tickets</a>
+                                <button class="place-btn js-buytickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -120,9 +120,9 @@
 
         </div>
     </div>
-    <div class="modal">
-            <div class="modal-container">
-                <div class="close-icon">
+    <div class="modal js-modal">
+            <div class="modal-container js-container">
+                <div class="close-icon js-modalclose">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -163,8 +163,30 @@
                 </footer>
             </div>
     </div>
-    <script>
-
-    </script>
 </body>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buytickets')
+        const modal=document.querySelector('.js-modal')
+        const modalContainer=document.querySelector('.js-container')
+        const modalclose=document.querySelector('.js-modalclose')
+        // hiển thị modal mua vé
+        function showBuyTickets(){
+            // alert("Show") show thông báo của trình duyệt
+            modal.classList.add('open')
+        }
+        // đóng modal mua vé
+        function hideBuyTickets(){
+            modal.classList.remove('open')
+        }
+        // lặp qua từng thẻ button và nghe hành vi click
+        for(const buyBtn of buyBtns){
+            buyBtn.addEventListener('click',showBuyTickets)
+        }
+        // nghe hành vi click vào button close
+        modalclose.addEventListener('click',hideBuyTickets)
+        modal.addEventListener('click',hideBuyTickets)
+        modalContainer.addEventListener('click',function(event){
+            event.stopPropagation()
+        })
+    </script>
 </html>
