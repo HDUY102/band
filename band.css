@@ -6,6 +6,7 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Common: Class dùng chung */
 .clear{
     clear: both;
 }
@@ -181,11 +182,9 @@ html{
     margin-top: -3px;
 }
 /* Places */
-.plaeces-list{
+.places-list{
     display: flex;
-    /* flex-direction: row; */
     margin: 32px -8px 0; 
-    padding-bottom: 48px;
 }
 .places-item{
     width: 33.33333%;
@@ -233,9 +232,85 @@ html{
     color: #000;
     background-color: #ccc;
 }
+/* Contact */
+.row{
+    margin-left:  -8px;
+    margin-right: -8px;  
+    transform: translateY(-12px);
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both; 
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.location-icon{
+    height: 17px;
+    width: 25px;
+    transform: translateY(2px);
+}
+.contact-content{
+    margin-top: 50px;
+}
+.contact-left{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-left .location-icon{
+    width: 30px;
+    display: inline-block;
+}
+.contact-right{
+    font-size: 15px;
+}
+.contact-right,.form-control{
+    padding: 10px;
+    width: 100%;
+}
+.form-submitbtn{
+    border-radius: 3px; /*bo góc khung*/
+    border: 1px  #000;
+    padding: 4px 16px;
+    color: #fff;
+    background-color: #222222;
+    float: right;
+    cursor: pointer;
+}
+.form-submitbtn:hover{
+    opacity: 0.9;
+    background-color: #ccc;
+}
+/* Map section */
+.map-section img{
+    width: 100%;
+    height: 750px;
+    border: 1px solid #000;;
+}
 /* footer */
 #footer{
 
+}
+.footer-text{
+    color: red;
+    text-align: center;
+    line-height: 1.5;
+    margin: 10px;
 }
 /* Modal */
 .modal{
