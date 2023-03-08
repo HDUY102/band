@@ -331,6 +331,9 @@ html{
 .footer-text a{
     color: #2196F3;
 }
+.footer-text a:hover{
+    opacity: 0.6;
+}
 /* Modal */
 .modal{
     position: fixed;
