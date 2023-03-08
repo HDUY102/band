@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./band.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/006/956/883/original/duy-letter-logo-design-on-white-background-duy-creative-initials-letter-logo-concept-duy-letter-design-free-vector.jpg" type="image/x-icon" />
     <title>The Band</title>
 </head>
 <body>
@@ -12,10 +13,10 @@
         <!-- Header -->
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="">More</a>
                     <!-- <img class="icon-down" src="./icon.svg" alt=""> -->
@@ -23,9 +24,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>                      
                     <ul class="subnav">
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
-                        <li><a href="">Best Choice</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Best Choice</a></li>
                     </ul>
                 </li>               
             </ul>
@@ -47,7 +48,7 @@
         <!-- Content -->
         <div id="content">
             <!-- Member section-->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-subheading">We Love Music</p>
                 <p class="about-text">we have created a fictional band website. Lorem ipsum dolor eiusmod nostrud laborum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud exerciation ullamco laboris eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident exercitation commodo</p>
@@ -68,7 +69,7 @@
                 </div>
             </div>
             <!-- Buy + Tour section-->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-subheading text-white">Remember to book your tickets!</p>
@@ -112,7 +113,7 @@
                 </div>
             </div>
             <!-- Contact section-->
-            <div class="content-section">
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note</p>
                 <!-- Contact -->
@@ -166,10 +167,24 @@
             </div>
         </div>
         <div id="footer">
-            <div class="social">
-
+            <div class="sociallist">
+                <a href="" class="ime">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+                    </svg>          
+                </a>
+                <a href="" class="ime">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                    </svg>                      
+                </a>
+                <a href="" class="ime">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                    </svg>              
+                </a>
             </div>
-            <p class="footer-text">Web by DUY</p>
+            <p class="footer-text">Web by <a href="#" >DUY</a></p>
         </div>
     </div>
     <div class="modal js-modal">
@@ -211,7 +226,7 @@
                     </button>
                 </div>
                 <footer class="modal-footer">
-                    <p class="modal-help"><a href="">Need help?</a></p>
+                    <p><a href="">Need help?</a></p>
                 </footer>
             </div>
     </div>
