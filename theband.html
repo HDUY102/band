@@ -264,4 +264,30 @@
         }
     </script>
 </body>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buytickets')
+    const modal=document.querySelector('.js-modal')
+    const modalContainer=document.querySelector('.js-container')
+    const modalclose=document.querySelector('.js-modalclose')
+    // hiển thị modal mua vé
+    function showBuyTickets(){
+        // alert("Show") show thông báo của trình duyệt
+        modal.classList.add('open')
+    }
+    // đóng modal mua vé
+    function hideBuyTickets(){
+        modal.classList.remove('open')
+    }
+    // lặp qua từng thẻ button và nghe hành vi click
+    for(const buyBtn of buyBtns){
+        buyBtn.addEventListener('click',showBuyTickets)
+    }
+    // nghe hành vi click vào button close
+    modalclose.addEventListener('click',hideBuyTickets)
+    modal.addEventListener('click',hideBuyTickets)
+    modalContainer.addEventListener('click',function(event){
+        event.stopPropagation()
+    })
+</script>
 </html>
