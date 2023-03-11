@@ -10,7 +10,12 @@
     .places-list{
         width: 100%;
     }
+    .form-submitbtn{
+        width: 100%;
+        height: 40px;
+    }
     .place-btn{
+        width: 100%;
         transform: translateX(-47px);
     }
     #header{
