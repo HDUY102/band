@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./band.css">
+    <link rel="stylesheet" href="./responsive.css">
     <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/006/956/883/original/duy-letter-logo-design-on-white-background-duy-creative-initials-letter-logo-concept-duy-letter-design-free-vector.jpg" type="image/x-icon" />
     <title>The Band</title>
 </head>
@@ -18,8 +19,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">More</a>
-                    <!-- <img class="icon-down" src="./icon.svg" alt=""> -->
+                    <a href="#">More</a>
                     <svg class="icon-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>                      
@@ -34,6 +34,11 @@
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>  
+            </div>
+            <div id="mobile-menu" class="menu-mobilebtn">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>                  
             </div>
         </div>
         <!-- Slider -->
@@ -230,6 +235,34 @@
                 </footer>
             </div>
     </div>
+    <script>
+        var header =document.getElementById('header');
+        var mobileMenu =document.getElementById('mobile-menu');
+        var headerHeight= header.clientHeight;
+        //Close/open mobile menu
+        mobileMenu.onclick= function(){
+            var isClosed= header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height='auto';
+            }else{
+                header.style.height= null;
+            }
+        }
+        // Auto close mobile menu when choose
+        var menuItems=document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i =0; i <menuItems.length; i++){
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(event){
+                // create Element have element sibling and element sibling have class= subnav
+                var isParentMenu=this.nextElementSibling && this.menuItem.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                }else{
+                    header.style.height= null;
+                }
+            }
+        }
+    </script>
 </body>
     <script>
         const buyBtns = document.querySelectorAll('.js-buytickets')

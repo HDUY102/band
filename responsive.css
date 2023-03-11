@@ -1,0 +1,36 @@
+/* PC */
+@media(min-width: 1024px){
+
+}
+/* Mobile */
+@media (max-width: 740px){
+    #header{
+        overflow: hidden;
+    }
+    #header .search-icon{
+        display: none;
+    }
+    #nav{
+        display: block;
+    }
+    #nav li a{
+        padding: 1px 24px;
+    }
+    #nav>li{
+        display: block;
+    }
+    #nav>li:first-child{
+        display: inline-block;
+    }
+    #nav li .icon-down{
+        transform: translate(-1320%, -50%) !important;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5 41px;
+    }
+}
