@@ -4,6 +4,15 @@
 }
 /* Mobile */
 @media (max-width: 740px){
+    .PR{
+        height: 75px;
+    }
+    .places-list{
+        width: 100%;
+    }
+    .place-btn{
+        transform: translateX(-47px);
+    }
     #header{
         overflow: hidden;
     }
@@ -31,6 +40,16 @@
     }
     #nav .subnav a{
         color: #fff;
-        padding: 5 41px;
+        padding: 5px 41px;
+    }
+    #content .member-item{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .contact-left{
+        width: 100%;
+    }
+    .contact-right{
+        margin-top: 5px !important;
     }
 }

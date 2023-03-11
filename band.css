@@ -151,7 +151,7 @@ html{
     line-height: 1.6;/*Khoảng cách dòng chữ*/
 }
 #content .member-list{
-    margin-top: 48px;
+    margin-top: 32px;
 }
 #content .member-item{
     float: left; 
@@ -166,7 +166,7 @@ html{
     width: 200px;
     border-radius: 4px; /*bo góc khung*/
 }
-/* Tuor section */
+/* Tour section */
 .tour-section{
     background-color: #000;
 }
@@ -201,7 +201,7 @@ html{
 /* Places */
 .places-list{
     display: flex;
-    margin: 32px -8px 0; 
+    margin: 16px -8px 0; 
 }
 .places-item{
     width: 33.33333%;

@@ -57,16 +57,16 @@
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-subheading">We Love Music</p>
                 <p class="about-text">we have created a fictional band website. Lorem ipsum dolor eiusmod nostrud laborum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud exerciation ullamco laboris eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident exercitation commodo</p>
-                <div class="members-list">
-                    <div class="member-item">
+                <div class="member-list">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Mr. DUY</p>
                         <img src="./img/guys.jpg" alt="Mr.DUY" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Mr. DUY</p>
                         <img src="./img/guys.jpg" alt="Mr.DUY" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Mr. DUY</p>
                         <img src="./img/guys.jpg" alt="Mr.DUY" class="member-img">
                     </div>
@@ -86,7 +86,7 @@
                     </ul>
                     <!-- Places -->
                     <div class="places-list">
-                        <div class="places-item">
+                        <div class="places-item mt-16 s-col-full">
                             <img src="./img/NY.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -95,7 +95,7 @@
                                 <button class="place-btn js-buytickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="places-item">
+                        <div class="places-item mt-16 s-col-full">
                             <img src="./img/PR.jpg" alt="Paris" class="place-img PR">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -104,7 +104,7 @@
                                 <button class="place-btn js-buytickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="places-item">
+                        <div class="places-item mt-16 s-col-full">
                             <img src="./img/LD.png" alt="London" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">London</h3>
@@ -264,29 +264,4 @@
         }
     </script>
 </body>
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buytickets')
-        const modal=document.querySelector('.js-modal')
-        const modalContainer=document.querySelector('.js-container')
-        const modalclose=document.querySelector('.js-modalclose')
-        // hiển thị modal mua vé
-        function showBuyTickets(){
-            // alert("Show") show thông báo của trình duyệt
-            modal.classList.add('open')
-        }
-        // đóng modal mua vé
-        function hideBuyTickets(){
-            modal.classList.remove('open')
-        }
-        // lặp qua từng thẻ button và nghe hành vi click
-        for(const buyBtn of buyBtns){
-            buyBtn.addEventListener('click',showBuyTickets)
-        }
-        // nghe hành vi click vào button close
-        modalclose.addEventListener('click',hideBuyTickets)
-        modal.addEventListener('click',hideBuyTickets)
-        modalContainer.addEventListener('click',function(event){
-            event.stopPropagation()
-        })
-    </script>
 </html>
